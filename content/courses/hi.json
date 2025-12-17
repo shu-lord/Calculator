@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "moduleCount": 1,
+  "level": "m",
+  "modules": [
+    {
+      "quiz": {
+        "questions": [
+          {
+            "correctIndex": 0
+          }
+        ]
+      }
+    }
+  ],
+  "slug": "mm",
+  "duration": "50min",
+  "title": "hi",
+  "difficulty": "beginner",
+  "description": "mm",
+  "category": "Ethics"
+}
