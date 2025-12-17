@@ -1,17 +1,6 @@
 {
   "courses": [
     {
-      "moduleCount": 3,
-      "level": "Entry Level",
-      "slug": "jailbreaking-ethics",
-      "thumbnail": "/images/courses/jailbreaking-ethics.jpg",
-      "duration": "3 weeks",
-      "title": "AI Jailbreaking Ethics",
-      "difficulty": "beginner",
-      "description": "Understand the ethical framework behind AI jailbreaking. Learn responsible disclosure and the importance of security research.",
-      "category": "Ethics"
-    },
-    {
       "moduleCount": 4,
       "level": "Entry Level",
       "slug": "prompt-engineering",
@@ -21,6 +10,17 @@
       "difficulty": "beginner",
       "description": "Master the art of crafting effective prompts for AI systems. Learn techniques to get better responses and understand AI behavior.",
       "category": "Prompt Engineering"
+    },
+    {
+      "moduleCount": 3,
+      "level": "Entry Level",
+      "slug": "jailbreaking-ethics",
+      "thumbnail": "/images/courses/jailbreaking-ethics.jpg",
+      "duration": "3 weeks",
+      "title": "AI Jailbreaking Ethics",
+      "difficulty": "beginner",
+      "description": "Understand the ethical framework behind AI jailbreaking. Learn responsible disclosure and the importance of security research.",
+      "category": "Ethics"
     },
     {
       "moduleCount": 4,
