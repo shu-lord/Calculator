@@ -5,17 +5,14 @@ backend:
   base_url: https://www.airedcell.dev
   auth_endpoint: /api/auth
 
-# Updated media folder to match new file structure
 media_folder: "images"
 public_folder: "/images"
-
-# Logo for CMS branding
 logo_url: "/images/logo.png"
 site_url: "https://www.airedcell.dev"
 
 collections:
   # ================================================
-  # COURSES - Main course editing
+  # 📚 COURSES - Individual course editing
   # ================================================
   - name: "courses"
     label: "📚 Courses"
@@ -27,64 +24,40 @@ collections:
     format: "json"
     slug: "{{slug}}"
     summary: "{{title}} ({{difficulty}})"
+    filter: { field: "title", pattern: ".+" }
     sortable_fields: ["title", "difficulty", "enabled"]
-    view_filters:
-      - label: "Enabled"
-        field: enabled
-        pattern: true
-      - label: "Disabled"
-        field: enabled
-        pattern: false
-      - label: "Beginner"
-        field: difficulty
-        pattern: "beginner"
-      - label: "Intermediate"
-        field: difficulty
-        pattern: "intermediate"
-      - label: "Advanced"
-        field: difficulty
-        pattern: "advanced"
     fields:
-      # Course Status
       - label: "⚡ Enabled"
         name: "enabled"
         widget: "boolean"
         default: true
-        hint: "Toggle OFF to hide this course from the website"
+        hint: "Toggle OFF to hide this course"
 
-      # Basic Course Info
       - label: "Course Title"
         name: "title"
         widget: "string"
         required: true
-        hint: "e.g., 'Prompt Engineering Fundamentals'"
 
       - label: "URL Slug"
         name: "slug"
         widget: "string"
         required: true
-        hint: "URL-friendly name (e.g., 'prompt-engineering')"
         pattern:
-          ["^[a-z0-9-]+$", "Use only lowercase letters, numbers, and hyphens"]
+          ["^[a-z0-9-]+$", "Use only lowercase letters, numbers, hyphens"]
 
-      - label: "Short Description"
+      - label: "Description"
         name: "description"
         widget: "text"
         required: true
-        hint: "Brief course description (shown on course card)"
 
       - label: "Thumbnail"
         name: "thumbnail"
         widget: "image"
         required: false
-        hint: "Course thumbnail image"
-        media_folder: "/images/courses"
 
       - label: "Difficulty"
         name: "difficulty"
         widget: "select"
-        required: true
-        default: "beginner"
         options:
           - { label: "🟢 Beginner", value: "beginner" }
           - { label: "🟡 Intermediate", value: "intermediate" }
@@ -94,78 +67,55 @@ collections:
         name: "duration"
         widget: "string"
         required: true
-        hint: "e.g., '4 weeks' or '10 hours'"
 
       - label: "Category"
         name: "category"
         widget: "select"
-        required: true
         options:
-          - "AI Security"
-          - "Prompt Engineering"
-          - "Jailbreaking"
-          - "Testing"
-          - "Ethics"
+          [
+            "AI Security",
+            "Prompt Engineering",
+            "Jailbreaking",
+            "Testing",
+            "Ethics",
+          ]
 
       - label: "Module Count"
         name: "moduleCount"
         widget: "number"
-        required: true
         min: 1
-        default: 1
-        hint: "Total number of modules"
 
       - label: "Level Label"
         name: "level"
         widget: "string"
-        required: true
-        hint: "e.g., 'Entry Level', 'Expert Level'"
 
-      # Course Modules
       - label: "📖 Modules"
         name: "modules"
         widget: "list"
         summary: "Module {{fields.order}}: {{fields.title}}"
         collapsed: true
-        minimize_collapsed: true
         fields:
-          - label: "Module Number"
-            name: "order"
-            widget: "number"
-            min: 1
-            required: true
-
-          - label: "Title"
-            name: "title"
-            widget: "string"
-            required: true
-
-          - label: "Description"
-            name: "description"
-            widget: "text"
-            required: false
-            hint: "Brief description of this module"
-
-          - label: "Content"
-            name: "content"
-            widget: "markdown"
-            required: true
-            hint: "Use ## for headings, **bold**, - for lists, ``` for code"
-
+          - { label: "Module Number", name: "order", widget: "number", min: 1 }
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "text",
+              required: false,
+            }
+          - {
+              label: "Content",
+              name: "content",
+              widget: "markdown",
+              required: true,
+            }
           - label: "Images"
             name: "images"
             widget: "list"
             required: false
             collapsed: true
-            minimize_collapsed: true
-            summary: "{{fields.caption}}"
             fields:
-              - {
-                  label: "Image",
-                  name: "image",
-                  widget: "image",
-                  required: true,
-                }
+              - { label: "Image", name: "image", widget: "image" }
               - {
                   label: "Caption",
                   name: "caption",
@@ -178,8 +128,7 @@ collections:
                   widget: "string",
                   required: false,
                 }
-
-          - label: "📝 Quiz"
+          - label: "Quiz"
             name: "quiz"
             widget: "object"
             required: false
@@ -188,86 +137,63 @@ collections:
               - label: "Questions"
                 name: "questions"
                 widget: "list"
-                summary: "Q: {{fields.question}}"
                 fields:
-                  - label: "Question"
-                    name: "question"
-                    widget: "text"
-                    required: true
-
-                  - label: "Answer Options"
+                  - { label: "Question", name: "question", widget: "text" }
+                  - label: "Options"
                     name: "options"
                     widget: "list"
-                    min: 2
-                    max: 4
-                    field:
-                      label: "Option"
-                      name: "option"
-                      widget: "string"
-
-                  - label: "Correct Answer"
-                    name: "correctIndex"
-                    widget: "number"
-                    min: 0
-                    max: 3
-                    default: 0
-                    hint: "0 = first, 1 = second, 2 = third, 3 = fourth"
-
-                  - label: "Explanation"
-                    name: "explanation"
-                    widget: "text"
-                    required: false
-                    hint: "Why this answer is correct"
+                    field: { label: "Option", name: "option", widget: "string" }
+                  - {
+                      label: "Correct Answer (0-3)",
+                      name: "correctIndex",
+                      widget: "number",
+                      min: 0,
+                      max: 3,
+                    }
+                  - {
+                      label: "Explanation",
+                      name: "explanation",
+                      widget: "text",
+                      required: false,
+                    }
 
   # ================================================
-  # SETTINGS - Site configuration files
+  # ⚙️ SETTINGS & PAGES
   # ================================================
   - name: "settings"
-    label: "⚙️ Settings"
+    label: "⚙️ Settings & Pages"
     files:
-      # General Site Settings
+      # General Settings
       - name: "general"
-        label: "General Settings"
+        label: "🌐 General Settings"
         file: "content/settings/general.json"
         fields:
-          - label: "Site Title"
-            name: "siteTitle"
-            widget: "string"
-            required: true
-          - label: "Site Description"
-            name: "siteDescription"
-            widget: "text"
-            required: true
+          - { label: "Site Title", name: "siteTitle", widget: "string" }
+          - {
+              label: "Site Description",
+              name: "siteDescription",
+              widget: "text",
+            }
 
-      # Home Page Content
+      # Home Page
       - name: "home-content"
-        label: "🏠 Home Page Content"
+        label: "🏠 Home Page"
         file: "content/home/content.json"
         fields:
-          # Hero Section
           - label: "Hero Section"
             name: "hero"
             widget: "object"
-            collapsed: true
+            collapsed: false
             fields:
               - {
-                  label: "Title",
-                  name: "title",
-                  widget: "string",
-                  required: true,
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
                 }
-              - {
-                  label: "Subtitle",
-                  name: "subtitle",
-                  widget: "string",
-                  required: true,
-                }
-              - {
-                  label: "Description",
-                  name: "description",
-                  widget: "text",
-                  required: true,
-                }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
               - label: "Primary Button"
                 name: "primaryButton"
                 widget: "object"
@@ -281,12 +207,17 @@ collections:
                   - { label: "Text", name: "text", widget: "string" }
                   - { label: "Link", name: "link", widget: "string" }
 
-          # About Section
           - label: "About Section"
             name: "about"
             widget: "object"
             collapsed: true
             fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
               - {
                   label: "Section Title",
                   name: "sectionTitle",
@@ -297,12 +228,7 @@ collections:
                   name: "sectionTitleHighlight",
                   widget: "string",
                 }
-              - {
-                  label: "Your Name",
-                  name: "name",
-                  widget: "string",
-                  required: true,
-                }
+              - { label: "Name", name: "name", widget: "string" }
               - { label: "Job Title", name: "jobTitle", widget: "string" }
               - {
                   label: "Organization",
@@ -321,15 +247,26 @@ collections:
                 widget: "list"
                 max: 3
                 fields:
+                  - {
+                      label: "Visible",
+                      name: "visible",
+                      widget: "boolean",
+                      default: true,
+                    }
                   - { label: "Number", name: "number", widget: "string" }
                   - { label: "Label", name: "label", widget: "string" }
 
-          # Purpose Section
           - label: "Purpose Section"
             name: "purpose"
             widget: "object"
             collapsed: true
             fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
               - {
                   label: "Section Title",
                   name: "sectionTitle",
@@ -346,10 +283,18 @@ collections:
                 widget: "list"
                 max: 3
                 fields:
-                  - label: "Icon"
-                    name: "icon"
-                    widget: "select"
-                    options: ["shield", "ethics", "education"]
+                  - {
+                      label: "Visible",
+                      name: "visible",
+                      widget: "boolean",
+                      default: true,
+                    }
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "select",
+                      options: ["shield", "ethics", "education"],
+                    }
                   - { label: "Title", name: "title", widget: "string" }
                   - {
                       label: "Description",
@@ -357,12 +302,17 @@ collections:
                       widget: "text",
                     }
 
-          # Resources Section
-          - label: "Resources Section"
+          - label: "Resources Section (Hidden)"
             name: "resources"
             widget: "object"
             collapsed: true
             fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: false,
+                }
               - {
                   label: "Section Title",
                   name: "sectionTitle",
@@ -374,15 +324,17 @@ collections:
                   widget: "string",
                 }
               - { label: "Description", name: "description", widget: "text" }
-              - label: "Resource Cards"
+              - label: "Cards"
                 name: "cards"
                 widget: "list"
-                max: 4
                 fields:
-                  - label: "Icon"
-                    name: "icon"
-                    widget: "select"
-                    options: ["github", "wiki", "document", "book"]
+                  - { label: "Visible", name: "visible", widget: "boolean" }
+                  - {
+                      label: "Icon",
+                      name: "icon",
+                      widget: "select",
+                      options: ["github", "wiki", "document", "book"],
+                    }
                   - { label: "Title", name: "title", widget: "string" }
                   - {
                       label: "Description",
@@ -392,12 +344,17 @@ collections:
                   - { label: "Link URL", name: "link", widget: "string" }
                   - { label: "Link Text", name: "linkText", widget: "string" }
 
-          # Contact Section
           - label: "Contact Section"
             name: "contact"
             widget: "object"
             collapsed: true
             fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
               - {
                   label: "Section Title",
                   name: "sectionTitle",
@@ -421,7 +378,169 @@ collections:
                       widget: "string",
                     }
 
-      # Course Index (for managing course order/list)
+      # About Page
+      - name: "about-page"
+        label: "👤 About Page"
+        file: "content/about/content.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Title Highlight",
+                  name: "titleHighlight",
+                  widget: "string",
+                }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Founder Section"
+            name: "founder"
+            widget: "object"
+            fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                max: 3
+                fields:
+                  - { label: "Visible", name: "visible", widget: "boolean" }
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Mission Section"
+            name: "mission"
+            widget: "object"
+            fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Values"
+            name: "values"
+            widget: "list"
+            fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      # Services Page
+      - name: "services-page"
+        label: "🛡️ Services Page"
+        file: "content/services/content.json"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Title Highlight",
+                  name: "titleHighlight",
+                  widget: "string",
+                }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.title}} {{fields.titleHighlight}}"
+            fields:
+              - {
+                  label: "Visible",
+                  name: "visible",
+                  widget: "boolean",
+                  default: true,
+                }
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - {
+                  label: "Title Highlight",
+                  name: "titleHighlight",
+                  widget: "string",
+                }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                field: { label: "Feature", name: "feature", widget: "string" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                max: 2
+                fields:
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Call to Action"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Primary Button"
+                name: "primaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+              - label: "Secondary Button"
+                name: "secondaryButton"
+                widget: "object"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+
+      # Projects
+      - name: "projects"
+        label: "🚀 Projects"
+        file: "content/projects/index.json"
+        fields:
+          - { label: "Section Title", name: "sectionTitle", widget: "string" }
+          - {
+              label: "Section Subtitle",
+              name: "sectionSubtitle",
+              widget: "text",
+            }
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Client", name: "client", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Impact", name: "impact", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+
+      # Course Index
       - name: "course-index"
         label: "📋 Course Order"
         file: "content/courses/index.json"
@@ -430,14 +549,8 @@ collections:
             name: "courses"
             widget: "list"
             summary: "{{fields.title}}"
-            hint: "Manage the order of courses displayed on the Learning page"
             fields:
-              - {
-                  label: "Slug",
-                  name: "slug",
-                  widget: "string",
-                  hint: "Must match the course file name",
-                }
+              - { label: "Slug", name: "slug", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - {
