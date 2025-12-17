@@ -1,0 +1,65 @@
+{
+  "title": "AI Jailbreaking Ethics",
+  "slug": "jailbreaking-ethics",
+  "description": "Understand the ethical framework behind AI jailbreaking. Learn responsible disclosure and the importance of security research.",
+  "thumbnail": "/images/courses/jailbreaking-ethics.jpg",
+  "difficulty": "beginner",
+  "duration": "3 weeks",
+  "category": "Ethics",
+  "enabled": false,
+  "moduleCount": 3,
+  "level": "Entry Level",
+  "modules": [
+    {
+      "order": 1,
+      "title": "Introduction to AI Ethics",
+      "description": "Understanding the ethical foundations of AI security research.",
+      "content": "## What is AI Ethics?\n\nAI ethics is the branch of ethics that examines the moral implications of artificial intelligence. When it comes to security research, ethics becomes even more critical.\n\n## Why Ethics Matter in AI Security\n\nAs AI systems become more powerful, the potential for misuse grows. Security researchers must:\n\n- Understand the difference between ethical research and malicious hacking\n- Follow responsible disclosure practices\n- Consider the broader implications of their findings\n- Protect vulnerable systems and users\n\n## The Researcher's Responsibility\n\n**Do No Harm:** The primary principle is to avoid causing damage.\n\n**Transparency:** Be clear about your intentions and methods.\n\n**Accountability:** Take responsibility for the outcomes of your research.",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What is the primary principle of ethical AI security research?",
+            "options": ["Make money", "Do no harm", "Find as many vulnerabilities as possible", "Ignore consequences"],
+            "correctIndex": 1,
+            "explanation": "The primary ethical principle is 'Do No Harm' - ensuring research doesn't cause damage to systems or users."
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "title": "Responsible Disclosure",
+      "description": "Learn the proper way to report vulnerabilities.",
+      "content": "## What is Responsible Disclosure?\n\nResponsible disclosure is the practice of reporting security vulnerabilities to the appropriate parties before making them public.\n\n## The Disclosure Process\n\n1. **Discovery** - Find and document the vulnerability\n2. **Report** - Contact the vendor/developer privately\n3. **Wait** - Give them time to fix the issue (typically 90 days)\n4. **Coordinate** - Work together on the disclosure timeline\n5. **Publish** - Release details after the fix is available\n\n## Why It Matters\n\n- Protects users from exploitation\n- Gives developers time to patch\n- Maintains trust in the security community\n- Avoids legal issues",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "How long should you typically wait before public disclosure?",
+            "options": ["1 day", "1 week", "90 days", "Never disclose"],
+            "correctIndex": 2,
+            "explanation": "The industry standard is typically 90 days, giving vendors adequate time to develop and deploy patches."
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "title": "Legal Considerations",
+      "description": "Understanding the legal landscape of security research.",
+      "content": "## Legal Framework\n\nSecurity research exists in a complex legal environment. Understanding the laws that apply to your work is essential.\n\n## Key Laws to Know\n\n**Computer Fraud and Abuse Act (CFAA):**\n- Prohibits unauthorized access to computers\n- Can apply even to well-intentioned research\n- Important to have authorization before testing\n\n**GDPR/Privacy Laws:**\n- Protect personal data\n- May affect how you handle discovered data\n- Require careful data handling\n\n## Protecting Yourself\n\n- Always get written permission before testing\n- Document everything\n- Use bug bounty programs when available\n- Consult legal counsel if unsure",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What should you do before testing a system for vulnerabilities?",
+            "options": ["Just test it", "Get written permission", "Tell your friends", "Wait until night"],
+            "correctIndex": 1,
+            "explanation": "Always get written permission before testing to protect yourself legally and ensure you're operating within ethical boundaries."
+          }
+        ]
+      }
+    }
+  ]
+}

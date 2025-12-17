@@ -1,0 +1,30 @@
+{
+  "navigation": {
+    "pages": [
+      { "name": "Home", "link": "index.html", "visible": true },
+      { "name": "Services", "link": "services.html", "visible": true },
+      { "name": "About", "link": "about.html", "visible": true },
+      { "name": "Resources", "link": "resources.html", "visible": false },
+      { "name": "Learning", "link": "learning.html", "visible": true },
+      { "name": "Contact", "link": "#site-footer", "visible": true }
+    ]
+  },
+  "brand": {
+    "name": "AI RedCell",
+    "tagline": "Sri Lanka's First AI Red Teaming & Vulnerability Research Agency"
+  },
+  "footer": {
+    "contact": {
+      "email": "hello@airedcell.dev",
+      "phone": "+94 72 275 6169",
+      "location": "Sri Lanka",
+      "hours": "Mon-Fri, 9AM-6PM IST"
+    },
+    "social": {
+      "github": "https://github.com/AI-RedCell",
+      "linkedin": "https://www.linkedin.com/company/ai-redcell/",
+      "whatsapp": "https://wa.me/94722756169"
+    },
+    "copyright": "© 2025 AI RedCell. All Rights Reserved. | Ethical AI Security Research | <a href='terms.html'>Terms</a> | <a href='privacy.html'>Privacy</a>"
+  }
+}

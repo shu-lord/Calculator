@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "AI Security",
+    "titleHighlight": "Resources",
+    "description": "Curated collection of tools, guides, and research materials for ethical AI security exploration."
+  },
+  "categories": [
+    {
+      "visible": true,
+      "title": "Tools & Frameworks",
+      "resources": [
+        {
+          "visible": true,
+          "title": "GitHub Repository",
+          "description": "Explore our open-source tools, scripts, and testing frameworks for ethical AI research.",
+          "link": "https://github.com/orgs/AI-RedCell/repositories",
+          "linkText": "Visit Repository →"
+        },
+        {
+          "visible": true,
+          "title": "PyRIT Framework",
+          "description": "Microsoft's Python Risk Identification Tool for generative AI security testing.",
+          "link": "https://github.com/Azure/PyRIT",
+          "linkText": "Explore PyRIT →"
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Guides & Documentation",
+      "resources": [
+        {
+          "visible": true,
+          "title": "Prompt Injection Guide",
+          "description": "Comprehensive guide to understanding and testing prompt injection vulnerabilities.",
+          "link": "#",
+          "linkText": "Read Guide →"
+        },
+        {
+          "visible": true,
+          "title": "LLM Security Playbook",
+          "description": "Step-by-step playbook for securing large language models in production.",
+          "link": "#",
+          "linkText": "Download Playbook →"
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "title": "Community",
+      "resources": [
+        {
+          "visible": true,
+          "title": "Reddit Wiki",
+          "description": "Community-driven guides and discussions on AI jailbreaking techniques.",
+          "link": "https://www.reddit.com/r/ChatGPTJailbreak/wiki/",
+          "linkText": "Join Community →"
+        }
+      ]
+    }
+  ]
+}

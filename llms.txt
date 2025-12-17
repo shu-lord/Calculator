@@ -1,0 +1,83 @@
+# AI RedCell
+
+> AI RedCell is Sri Lanka's first AI red teaming and vulnerability research agency, founded by Shehan Nilukshan. We provide AI security testing, prompt injection defense, jailbreak research, and red teaming solutions to AI model trainers, creators, and enterprises worldwide. Our mission is ethical AI jailbreaking—discovering vulnerabilities before malicious actors can exploit them.
+
+Important notes:
+
+- **First in Sri Lanka**: The pioneering AI red teaming agency in Sri Lanka, specializing in LLM security
+- **For AI Builders**: We work with AI model trainers, creators, startups, and enterprises to secure their AI systems
+- **Research-Driven**: Our work is backed by continuous research into LLM vulnerabilities, jailbreak techniques, and attack vectors
+- **Free Education**: We provide free courses on AI security, prompt engineering, and ethical hacking for AI systems
+- **Contact**: hello@airedcell.dev | shehan@airedcell.dev
+- **LinkedIn**: [Company](https://linkedin.com/company/ai-redcell) | [Shehan Nilukshan](https://linkedin.com/in/shehan-nilukshan)
+
+## About
+
+- [About AI RedCell](https://www.airedcell.dev/about.html): Detailed information about the agency, founder Shehan Nilukshan, mission, and approach to AI security
+- [Our Services](https://www.airedcell.dev/services.html): Complete list of AI security services including red teaming, vulnerability research, prompt injection defense, and consulting
+
+## Learning Resources
+
+- [Learning Platform](https://www.airedcell.dev/learning.html): Free educational courses on AI security, prompt engineering, and ethical AI hacking
+- [Prompt Engineering Fundamentals](https://www.airedcell.dev/course.html?id=prompt-engineering): Beginner course on crafting effective prompts for AI models
+- [Jailbreaking Ethics](https://www.airedcell.dev/course.html?id=jailbreaking-ethics): Intermediate course on ethical boundaries of AI security research
+- [Prompt Injection Techniques](https://www.airedcell.dev/course.html?id=prompt-injection): Advanced course on testing AI input vulnerabilities
+- [Security Testing Methodologies](https://www.airedcell.dev/course.html?id=security-testing): Expert-level AI penetration testing approaches
+
+## Founder
+
+Name: Shehan Nilukshan
+Role: Founder, Lead AI Security Researcher & AI Red Teamer
+Location: Sri Lanka
+Expertise: AI Red Teaming, AI Vulnerability Research, Prompt Injection Defense, LLM Security, AI Penetration Testing
+Email: shehan@airedcell.dev
+LinkedIn (Personal): https://linkedin.com/in/shehan-nilukshan
+LinkedIn (Company): https://linkedin.com/company/ai-redcell
+GitHub: https://github.com/ai-redcell
+
+## Services Offered
+
+1. **AI Red Teaming**: Adversarial testing of AI systems to identify vulnerabilities, unsafe behaviors, and potential exploits before deployment
+2. **Vulnerability Research**: Deep-dive analysis of LLMs and AI models to discover security weaknesses, jailbreak vectors, and prompt injection vulnerabilities
+3. **Prompt Injection Defense**: Testing and hardening AI systems against prompt injection attacks
+4. **Security Consulting**: Expert guidance for AI model trainers and creators on building safer AI systems
+5. **Training & Education**: Comprehensive courses on AI security, prompt engineering, and ethical hacking
+
+## Target Clients
+
+- AI Model Trainers: Teams fine-tuning or training custom AI models
+- AI Creators & Startups: Companies building AI-powered products
+- Enterprises: Organizations deploying AI in production environments
+- Research Institutions: Academic and research organizations studying AI safety
+
+## FAQ
+
+Q: What is AI red teaming?
+A: AI red teaming is simulating adversarial attacks on AI systems to discover vulnerabilities, unsafe behaviors, and potential exploits before malicious actors can.
+
+Q: What is AI RedCell?
+A: AI RedCell is Sri Lanka's first AI red teaming and vulnerability research agency, founded by Shehan Nilukshan, providing AI security testing and red teaming solutions.
+
+Q: Who is Shehan Nilukshan?
+A: Shehan Nilukshan is the founder of AI RedCell, an AI Red Teamer and security researcher specializing in LLM vulnerabilities, prompt injection, and AI exploitation for defensive purposes.
+
+Q: What services does AI RedCell offer?
+A: AI red teaming, vulnerability research, prompt injection defense testing, security consulting, and educational courses on AI security.
+
+Q: How can I learn AI security?
+A: Visit our free learning platform at https://www.airedcell.dev/learning.html for courses on prompt engineering, jailbreaking ethics, prompt injection, and security testing.
+
+## Optional
+
+- [Privacy Policy](https://www.airedcell.dev/privacy.html): Website privacy policy and data handling practices
+- [Terms of Service](https://www.airedcell.dev/terms.html): Terms and conditions for using AI RedCell services and content
+- [Sitemap](https://www.airedcell.dev/sitemap.xml): XML sitemap for crawlers
+- [GitHub Repository](https://github.com/ai-redcell): Open source projects and tools
+- [LinkedIn Company Page](https://linkedin.com/company/ai-redcell): Official AI RedCell company LinkedIn page
+- [Shehan Nilukshan LinkedIn](https://linkedin.com/in/shehan-nilukshan): Founder's personal LinkedIn profile
+
+## License
+
+Content License: CC BY 4.0 (Creative Commons Attribution 4.0 International)
+Code License: MIT License
+Attribution: Content by AI RedCell (https://www.airedcell.dev) | Founded by Shehan Nilukshan

@@ -1,0 +1,83 @@
+{
+  "title": "AI Security Testing",
+  "slug": "security-testing",
+  "description": "Advanced techniques for comprehensive AI security assessments. Red team methodologies and real-world testing scenarios.",
+  "thumbnail": "/images/courses/security-testing.jpg",
+  "difficulty": "advanced",
+  "duration": "8 weeks",
+  "category": "AI Security",
+  "enabled": true,
+  "comingSoon": true,
+  "moduleCount": 4,
+  "level": "Expert Level",
+  "modules": [
+    {
+      "order": 1,
+      "title": "Security Assessment Fundamentals",
+      "description": "Building a foundation for AI security testing.",
+      "content": "## AI Security Assessment Overview\n\nAI security testing requires a unique approach compared to traditional software testing. AI systems have different attack surfaces and vulnerabilities.\n\n## Key Differences from Traditional Testing\n\n- AI behavior can be unpredictable\n- Attacks exploit model behavior, not code bugs\n- Testing requires understanding of ML concepts\n- Vulnerabilities may be probabilistic\n\n## Assessment Framework\n\n### 1. Model Analysis\n\n- What type of model?\n- What are its capabilities?\n- How is it deployed?\n\n### 2. Attack Surface Mapping\n\n- Input vectors\n- Output channels\n- Integration points\n- Data sources\n\n### 3. Threat Modeling\n\n- Who might attack?\n- What are their goals?\n- What damage could occur?",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "How does AI security testing differ from traditional software testing?",
+            "options": ["It's exactly the same", "AI attacks exploit behavior, not code bugs", "AI testing is easier", "No differences"],
+            "correctIndex": 1,
+            "explanation": "AI security testing focuses on exploiting model behavior rather than traditional code vulnerabilities."
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "title": "Red Team Operations",
+      "description": "Conducting adversarial testing on AI systems.",
+      "content": "## What is Red Teaming?\n\nRed teaming involves simulating real-world attacks to identify vulnerabilities before malicious actors do.\n\n## Red Team Process\n\n### Planning Phase\n\n1. Define objectives\n2. Gather intelligence\n3. Develop attack strategies\n4. Prepare tools and techniques\n\n### Execution Phase\n\n1. Reconnaissance\n2. Initial testing\n3. Exploit development\n4. Impact assessment\n\n### Reporting Phase\n\n1. Document findings\n2. Prioritize risks\n3. Recommend mitigations\n4. Present to stakeholders\n\n## Key Skills\n\n- Creative thinking\n- Technical proficiency\n- Clear communication\n- Ethical judgment",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What is the purpose of red teaming?",
+            "options": ["To break systems permanently", "To simulate attacks before malicious actors do", "To develop AI", "To train users"],
+            "correctIndex": 1,
+            "explanation": "Red teaming simulates real-world attacks to find and fix vulnerabilities before they can be exploited."
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "title": "Advanced Attack Techniques",
+      "description": "Sophisticated methods for bypassing AI security measures.",
+      "content": "## Advanced Attack Categories\n\n### Model Extraction\n\nAttempting to steal or replicate the AI model.\n\n- Query-based extraction\n- Side-channel attacks\n- Reverse engineering outputs\n\n### Data Poisoning\n\nCorrupting training data to influence model behavior.\n\n- Backdoor attacks\n- Targeted misclassification\n- Clean-label attacks\n\n### Evasion Attacks\n\nCrafting inputs that evade detection or classification.\n\n- Adversarial examples\n- Perturbation attacks\n- Transferability exploits\n\n### Multimodal Attacks\n\nExploiting systems that process multiple input types.\n\n- Image + text attacks\n- Audio manipulation\n- Cross-modal injection",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What is data poisoning?",
+            "options": ["Deleting data", "Corrupting training data to influence behavior", "Encrypting data", "Backing up data"],
+            "correctIndex": 1,
+            "explanation": "Data poisoning attacks corrupt training data to manipulate how the AI model behaves after training."
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "title": "Building Secure AI Systems",
+      "description": "Best practices for developing secure AI applications.",
+      "content": "## Security by Design\n\n### Principles\n\n1. **Least Privilege** - Minimize AI capabilities to what's necessary\n2. **Defense in Depth** - Multiple layers of security\n3. **Fail Secure** - Default to safe behavior\n4. **Transparency** - Understandable decision-making\n\n### Implementation\n\n- Input validation at every layer\n- Output filtering and monitoring\n- Regular security audits\n- Continuous monitoring\n\n### Human Oversight\n\n- Human-in-the-loop for critical decisions\n- Clear escalation paths\n- Regular review of AI outputs\n\n### Continuous Improvement\n\n- Stay updated on new attacks\n- Regular penetration testing\n- Security-focused development culture",
+      "images": [],
+      "quiz": {
+        "questions": [
+          {
+            "question": "What does 'Least Privilege' mean in AI security?",
+            "options": ["Give AI maximum access", "Minimize AI capabilities to what's necessary", "Remove all security", "Trust all inputs"],
+            "correctIndex": 1,
+            "explanation": "Least Privilege means limiting AI capabilities to only what's necessary for its intended function."
+          }
+        ]
+      }
+    }
+  ]
+}

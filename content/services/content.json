@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "title": "Our",
+    "titleHighlight": "Services",
+    "description": "Comprehensive AI security solutions to protect your systems from emerging threats and vulnerabilities."
+  },
+  "services": [
+    {
+      "visible": true,
+      "id": "red-teaming",
+      "title": "AI",
+      "titleHighlight": "Red Teaming",
+      "description": "Our AI red teaming service provides comprehensive adversarial testing that simulates real-world attacks on your AI systems. We identify vulnerabilities before malicious actors can exploit them, ensuring your AI infrastructure is robust and secure.",
+      "features": [
+        "Simulated adversarial attacks on AI models",
+        "Identification of security weaknesses and blind spots",
+        "Testing across multiple attack vectors",
+        "Detailed vulnerability reports with remediation steps",
+        "Alignment with MITRE ATLAS framework",
+        "Post-assessment security hardening recommendations"
+      ],
+      "stats": [
+        { "number": "100+", "label": "Attack Vectors" },
+        { "number": "MITRE", "label": "ATLAS Aligned" }
+      ]
+    },
+    {
+      "visible": true,
+      "id": "prompt-injection",
+      "title": "Prompt",
+      "titleHighlight": "Injection Testing",
+      "description": "Specialized security testing focused on LLM input vulnerabilities. We test for prompt injection attacks, data exfiltration risks, and malicious prompt patterns that could compromise your AI applications.",
+      "features": [
+        "Direct and indirect prompt injection testing",
+        "Context manipulation vulnerability assessment",
+        "Data exfiltration risk analysis",
+        "System prompt extraction attempts",
+        "Multi-stage injection attack testing",
+        "Input sanitization effectiveness evaluation"
+      ],
+      "stats": [
+        { "number": "50+", "label": "Injection Types" },
+        { "number": "99%", "label": "Detection Rate" }
+      ]
+    },
+    {
+      "visible": true,
+      "id": "security-audits",
+      "title": "LLM Security",
+      "titleHighlight": "Audits",
+      "description": "Complete security assessment of your LLM infrastructure, covering model behavior, data handling, API endpoints, and integration points for comprehensive protection.",
+      "features": [
+        "Full architecture security review",
+        "Data flow and privacy assessment",
+        "Model output safety evaluation",
+        "Third-party integration security",
+        "Compliance gap analysis",
+        "Security posture recommendations"
+      ],
+      "stats": [
+        { "number": "100%", "label": "Coverage" },
+        { "number": "24h", "label": "Response Time" }
+      ]
+    },
+    {
+      "visible": true,
+      "id": "jailbreak",
+      "title": "Jailbreak",
+      "titleHighlight": "Assessment",
+      "description": "Systematic evaluation of your AI system's resistance to jailbreak attempts and safety bypass techniques used by attackers to circumvent built-in protections.",
+      "features": [
+        "Known jailbreak technique testing",
+        "Novel bypass method exploration",
+        "Safety guardrail stress testing",
+        "Ethical boundary probing",
+        "Resistance scoring and benchmarks",
+        "Remediation strategy development"
+      ],
+      "stats": [
+        { "number": "200+", "label": "Techniques" },
+        { "number": "Zero", "label": "False Negatives" }
+      ]
+    },
+    {
+      "visible": true,
+      "id": "research",
+      "title": "Vulnerability",
+      "titleHighlight": "Research",
+      "description": "Ongoing vulnerability discovery and research to stay ahead of emerging threats. We identify new attack vectors before they become widespread.",
+      "features": [
+        "Zero-day vulnerability research",
+        "Emerging threat intelligence",
+        "Academic collaboration",
+        "Responsible disclosure process",
+        "Research publication support",
+        "Industry trend analysis"
+      ],
+      "stats": [
+        { "number": "50+", "label": "CVEs Found" },
+        { "number": "24/7", "label": "Monitoring" }
+      ]
+    },
+    {
+      "visible": true,
+      "id": "training",
+      "title": "Security",
+      "titleHighlight": "Training",
+      "description": "Educational programs to build internal AI security expertise within your organization, from developer workshops to executive briefings.",
+      "features": [
+        "Hands-on security workshops",
+        "Developer security training",
+        "Executive briefings",
+        "Custom curriculum development",
+        "Certification preparation",
+        "Ongoing skill development"
+      ],
+      "stats": [
+        { "number": "", "label": "Trained" },
+        { "number": "", "label": "Satisfaction" }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Ready to Secure Your AI Systems?",
+    "description": "Contact us today for a free consultation and learn how we can help protect your AI infrastructure from emerging threats.",
+    "primaryButton": {
+      "text": "Request Assessment",
+      "link": "index.html#contact"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "about.html"
+    }
+  }
+}

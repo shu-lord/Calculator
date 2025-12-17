@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>AI Security Services | AI RedCell - Red Teaming & Vulnerability Research</title>
+    <meta
+      name="title"
+      content="AI Security Services | AI RedCell - Red Teaming & Vulnerability Research"
+    />
+    <meta
+      name="description"
+      content="Comprehensive AI security services including red teaming, prompt injection testing, LLM security audits, jailbreak assessment, vulnerability research, and security training."
+    />
+    <meta
+      name="keywords"
+      content="AI red teaming services, prompt injection testing, LLM security audit, jailbreak assessment, AI vulnerability research, AI security training"
+    />
+    <meta name="author" content="Shehan Nilukshan" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.airedcell.dev/services.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.airedcell.dev/services.html" />
+    <meta property="og:title" content="AI Security Services | AI RedCell" />
+    <meta
+      property="og:description"
+      content="Comprehensive AI security services including red teaming, prompt injection testing, and LLM security audits."
+    />
+    <meta property="og:image" content="https://www.airedcell.dev/images/logo.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.airedcell.dev/services.html" />
+    <meta name="twitter:title" content="AI Security Services | AI RedCell" />
+    <meta
+      name="twitter:description"
+      content="Comprehensive AI security services including red teaming, prompt injection testing, and LLM security audits."
+    />
+    <meta name="twitter:image" content="https://www.airedcell.dev/images/logo.png" />
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/smooth-transitions.css" />
+    <link rel="stylesheet" href="css/overflow-fixes.css" />
+    <link rel="stylesheet" href="css/mobile-responsive.css" />
+    <link rel="stylesheet" href="css/mobile-premium.css" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+
+    <style>
+      /* Services Page Specific Styles */
+      .services-hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .services-hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(
+          to bottom,
+          transparent 0%,
+          rgba(10, 10, 15, 0.3) 30%,
+          rgba(10, 10, 15, 0.7) 60%,
+          rgba(10, 10, 15, 1) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .services-hero #matrix-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      .services-hero .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 2rem;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .services-hero .page-title {
+        font-family: var(--font-heading);
+        font-size: 4rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      /* Service Detail Section */
+      .service-detail {
+        padding: 80px 0;
+        border-bottom: 1px solid rgba(255, 0, 64, 0.1);
+      }
+
+      .service-detail:nth-child(even) {
+        background: var(--darker-bg);
+      }
+
+      .service-detail:nth-child(odd) {
+        background: var(--dark-bg);
+      }
+
+      .service-detail-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .service-detail:nth-child(even) .service-detail-content {
+        direction: rtl;
+      }
+
+      .service-detail:nth-child(even) .service-detail-content > * {
+        direction: ltr;
+      }
+
+      .service-detail-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-1);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-detail-icon svg {
+        width: 40px;
+        height: 40px;
+        color: white;
+      }
+
+      .service-detail-title {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .service-detail-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+      }
+
+      .service-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+      }
+
+      .service-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-secondary);
+        font-size: 1rem;
+      }
+
+      .service-features li::before {
+        content: '✓';
+        color: var(--primary-red);
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .service-visual {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .service-visual-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 1.5rem;
+        color: var(--primary-red);
+        opacity: 0.8;
+      }
+
+      .service-visual-icon svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .service-stats {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+
+      .service-stat {
+        text-align: center;
+      }
+
+      .service-stat-number {
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        font-weight: 900;
+        color: var(--primary-red);
+      }
+
+      .service-stat-label {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* CTA Section */
+      .services-cta {
+        padding: 80px 0;
+        background: var(--darker-bg);
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .cta-title {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .cta-description {
+        font-size: 1.1rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+        line-height: 1.7;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Responsive */
+      @media (max-width: 968px) {
+        .service-detail-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .service-detail:nth-child(even) .service-detail-content {
+          direction: ltr;
+        }
+
+        .service-detail-title {
+          font-size: 2rem;
+        }
+
+        .services-hero .page-title {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .service-stats {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .cta-title {
+          font-size: 1.8rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="index.html" style="text-decoration: none; color: white;">
+            <span class="logo-text">AI <span class="highlight">RedCell</span></span>
+          </a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="learning.html" class="nav-link">Learning</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="services-hero" role="banner">
+      <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <h1 class="page-title">Our <span class="highlight">Services</span></h1>
+        <div class="title-underline"></div>
+        <p class="section-description" style="max-width: 700px;">
+          Comprehensive AI security solutions to protect your systems from emerging threats and vulnerabilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- AI Red Teaming -->
+    <section id="red-teaming" class="service-detail">
+      <div class="container">
+        <div class="service-detail-content">
+          <div class="service-info">
+            <div class="service-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v4M12 16h.01"/>
+              </svg>
+            </div>
+            <h2 class="service-detail-title">AI <span class="highlight">Red Teaming</span></h2>
+            <p class="service-detail-description">
+              Our AI red teaming service provides comprehensive adversarial testing that simulates real-world attacks on your AI systems. We identify vulnerabilities before malicious actors can exploit them, ensuring your AI infrastructure is robust and secure.
+            </p>
+            <ul class="service-features">
+              <li>Simulated adversarial attacks on AI models</li>
+              <li>Identification of security weaknesses and blind spots</li>
+              <li>Testing across multiple attack vectors</li>
+              <li>Detailed vulnerability reports with remediation steps</li>
+              <li>Alignment with MITRE ATLAS framework</li>
+              <li>Post-assessment security hardening recommendations</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-primary">Request Assessment</a>
+          </div>
+          <div class="service-visual">
+            <div class="service-visual-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v4M12 16h.01"/>
+              </svg>
+            </div>
+            <h3>Adversarial Testing</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Comprehensive attack simulation to strengthen your AI defenses
+            </p>
+            <div class="service-stats">
+              <div class="service-stat">
+                <div class="service-stat-number">100+</div>
+                <div class="service-stat-label">Attack Vectors</div>
+              </div>
+              <div class="service-stat">
+                <div class="service-stat-number">MITRE</div>
+                <div class="service-stat-label">ATLAS Aligned</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prompt Injection Testing -->
+    <section id="prompt-injection" class="service-detail">
+      <div class="container">
+        <div class="service-detail-content">
+          <div class="service-info">
+            <div class="service-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <path d="M12 18v-6M9 15l3 3 3-3"/>
+              </svg>
+            </div>
+            <h2 class="service-detail-title">Prompt <span class="highlight">Injection Testing</span></h2>
+            <p class="service-detail-description">
+              Specialized security testing focused on LLM input vulnerabilities. We test for prompt injection attacks, data exfiltration risks, and malicious prompt patterns that could compromise your AI applications.
+            </p>
+            <ul class="service-features">
+              <li>Direct and indirect prompt injection testing</li>
+              <li>Context manipulation vulnerability assessment</li>
+              <li>Data exfiltration risk analysis</li>
+              <li>System prompt extraction attempts</li>
+              <li>Multi-stage injection attack testing</li>
+              <li>Input sanitization effectiveness evaluation</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-primary">Request Assessment</a>
+          </div>
+          <div class="service-visual">
+            <div class="service-visual-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <path d="M12 18v-6M9 15l3 3 3-3"/>
+              </svg>
+            </div>
+            <h3>Input Security</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Protect your LLMs from malicious prompt manipulation
+            </p>
+            <div class="service-stats">
+              <div class="service-stat">
+                <div class="service-stat-number">50+</div>
+                <div class="service-stat-label">Injection Types</div>
+              </div>
+              <div class="service-stat">
+                <div class="service-stat-number">OWASP</div>
+                <div class="service-stat-label">LLM Top 10</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LLM Security Audits -->
+    <section id="security-audits" class="service-detail">
+      <div class="container">
+        <div class="service-detail-content">
+          <div class="service-info">
+            <div class="service-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                <circle cx="12" cy="16" r="1"/>
+              </svg>
+            </div>
+            <h2 class="service-detail-title">LLM Security <span class="highlight">Audits</span></h2>
+            <p class="service-detail-description">
+              Comprehensive security assessments covering all aspects of your language model deployment. From model architecture to API endpoints, we evaluate your entire AI infrastructure for security vulnerabilities.
+            </p>
+            <ul class="service-features">
+              <li>End-to-end LLM deployment security review</li>
+              <li>API security and authentication assessment</li>
+              <li>Data handling and privacy compliance check</li>
+              <li>Model output filtering effectiveness</li>
+              <li>Third-party integration security review</li>
+              <li>Comprehensive audit report with risk ratings</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-primary">Request Assessment</a>
+          </div>
+          <div class="service-visual">
+            <div class="service-visual-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                <circle cx="12" cy="16" r="1"/>
+              </svg>
+            </div>
+            <h3>Full Security Audit</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Complete security assessment for your LLM infrastructure
+            </p>
+            <div class="service-stats">
+              <div class="service-stat">
+                <div class="service-stat-number">360°</div>
+                <div class="service-stat-label">Coverage</div>
+              </div>
+              <div class="service-stat">
+                <div class="service-stat-number">NIST</div>
+                <div class="service-stat-label">AI RMF</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jailbreak Assessment -->
+    <section id="jailbreak" class="service-detail">
+      <div class="container">
+        <div class="service-detail-content">
+          <div class="service-info">
+            <div class="service-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h2 class="service-detail-title">Jailbreak <span class="highlight">Assessment</span></h2>
+            <p class="service-detail-description">
+              Testing AI safety boundaries and guardrails to ensure your systems resist manipulation attempts. We evaluate how well your AI maintains its intended behavior under adversarial conditions.
+            </p>
+            <ul class="service-features">
+              <li>Safety guardrail bypass testing</li>
+              <li>Role-play and persona manipulation tests</li>
+              <li>Multi-turn conversation exploitation</li>
+              <li>Encoding and obfuscation bypass attempts</li>
+              <li>Content policy circumvention testing</li>
+              <li>Guardrail strengthening recommendations</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-primary">Request Assessment</a>
+          </div>
+          <div class="service-visual">
+            <div class="service-visual-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                <polyline points="2 17 12 22 22 17"/>
+                <polyline points="2 12 12 17 22 12"/>
+              </svg>
+            </div>
+            <h3>Guardrail Testing</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Ensure your AI stays within safe operational boundaries
+            </p>
+            <div class="service-stats">
+              <div class="service-stat">
+                <div class="service-stat-number">200+</div>
+                <div class="service-stat-label">Test Cases</div>
+              </div>
+              <div class="service-stat">
+                <div class="service-stat-number">Ethical</div>
+                <div class="service-stat-label">Testing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vulnerability Research -->
+    <section id="research" class="service-detail">
+      <div class="container">
+        <div class="service-detail-content">
+          <div class="service-info">
+            <div class="service-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <h2 class="service-detail-title">Vulnerability <span class="highlight">Research</span></h2>
+            <p class="service-detail-description">
+              Ongoing security research to discover emerging threats and keep your AI systems ahead of attackers. Our research team continuously explores new attack vectors and develops detection methods.
+            </p>
+            <ul class="service-features">
+              <li>Zero-day vulnerability discovery</li>
+              <li>Emerging threat analysis and monitoring</li>
+              <li>Custom exploit development for testing</li>
+              <li>Responsible disclosure coordination</li>
+              <li>Threat intelligence reports</li>
+              <li>Proactive security recommendations</li>
+            </ul>
+            <a href="index.html#contact" class="btn btn-primary">Request Assessment</a>
+          </div>
+          <div class="service-visual">
+            <div class="service-visual-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 16v-4M12 8h.01"/>
+              </svg>
+            </div>
+            <h3>Cutting-Edge Research</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Stay ahead of threats with our ongoing security research
+            </p>
+            <div class="service-stats">
+              <div class="service-stat">
+                <div class="service-stat-number">100%</div>
+                <div class="service-stat-label">Responsible</div>
+              </div>
+              <div class="service-stat">
+                <div class="service-stat-number">CVEs</div>
+                <div class="service-stat-label">Reported</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security Training -->
+    <section id="training" class="service-detail">
+      <div class="container">
+        <div class="service-detail-content">
+          <div class="service-info">
+            <div class="service-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h2 class="service-detail-title">Security <span class="highlight">Training</span></h2>
+            <p class="service-detail-description">
+              Expert-led training programs to build your team's AI security capabilities and awareness. From executive briefings to hands-on technical workshops, we offer training for all skill levels.
+            </p>
+            <ul class="service-features">
+              <li>Customized corporate training programs</li>
+              <li>Hands-on red teaming workshops</li>
+              <li>Executive AI security briefings</li>
+              <li>Developer security awareness training</li>
+              <li>Incident response preparation</li>
+              <li>Free online courses available</li>
+            </ul>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="index.html#contact" class="btn btn-primary">Request Training</a>
+              <a href="learning.html" class="btn btn-secondary">Free Courses</a>
+            </div>
+          </div>
+          <div class="service-visual">
+            <div class="service-visual-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+              </svg>
+            </div>
+            <h3>Expert Training</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">
+              Build your team's AI security expertise
+            </p>
+            <div class="service-stats">
+              <div class="service-stat">
+                <div class="service-stat-number">FREE</div>
+                <div class="service-stat-label">Courses</div>
+              </div>
+              <div class="service-stat">
+                <div class="service-stat-number">4+</div>
+                <div class="service-stat-label">Programs</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Workflow -->
+    <section id="workflow" class="service-detail">
+      <div class="container">
+        <h2 class="service-detail-title" style="text-align: center; margin-bottom: 3rem;">
+          Our Research <span class="highlight">Workflow</span>
+        </h2>
+        <div class="workflow">
+          <div class="workflow-steps">
+            <div class="workflow-step">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h4>Identify Target</h4>
+                <p>Select AI systems and specific behaviors to test</p>
+              </div>
+            </div>
+            <div class="workflow-connector"></div>
+
+            <div class="workflow-step">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h4>Design Tests</h4>
+                <p>Create ethical prompts and scenarios</p>
+              </div>
+            </div>
+            <div class="workflow-connector"></div>
+
+            <div class="workflow-step">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h4>Execute & Document</h4>
+                <p>Run tests and record detailed findings</p>
+              </div>
+            </div>
+            <div class="workflow-connector"></div>
+
+            <div class="workflow-step">
+              <div class="step-number">04</div>
+              <div class="step-content">
+                <h4>Report & Educate</h4>
+                <p>Share discoveries responsibly with stakeholders</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="services-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to Secure Your <span class="highlight">AI Systems?</span></h2>
+          <p class="cta-description">
+            Get a comprehensive security assessment from Sri Lanka's first AI red teaming agency. 
+            We'll identify vulnerabilities before attackers do.
+          </p>
+          <div class="cta-buttons">
+            <a href="index.html#contact" class="btn btn-primary">Request Free Consultation</a>
+            <a href="about.html" class="btn btn-secondary">Learn About Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="site-footer" class="footer">
+      <div class="footer-particles"></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>AI <span class="highlight">RedCell</span></h3>
+            <p>Sri Lanka's First AI Red Teaming & Vulnerability Research Agency</p>
+            <div class="footer-contact">
+              <p><a href="mailto:hello@airedcell.dev">📧 hello@airedcell.dev</a></p>
+              <p>📍 Sri Lanka</p>
+              <p>🕒 Mon-Fri, 9AM-6PM IST</p>
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <h4>Connect</h4>
+            <div class="social-links">
+              <a href="https://github.com/AI-RedCell" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/ai-redcell/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="mailto:hello@airedcell.dev" class="social-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+            </div>
+            <a href="https://wa.me/94722756169" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Send a Message
+            </a>
+          </div>
+
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="learning.html">Learning</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 AI RedCell. All Rights Reserved. | Ethical AI Security Research | <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/matrix.js"></script>
+    <script src="js/site-loader.js"></script>
+    <script src="js/services-content.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

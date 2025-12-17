@@ -1,0 +1,499 @@
+/* ===================================
+   MOBILE PREMIUM ENHANCEMENTS
+   AI RedCell - Desktop-Quality Mobile
+   =================================== */
+
+/* ----------------------------------
+   PREMIUM MOBILE EFFECTS
+   ---------------------------------- */
+
+/* Enhanced gradients on mobile */
+@media (max-width: 768px) {
+  /* Premium hero glow effect */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 0, 64, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Premium title glow on mobile */
+  .hero-title {
+    text-shadow: 0 0 30px rgba(255, 0, 64, 0.5);
+  }
+  
+  .glitch {
+    animation: glitch 2s infinite;
+  }
+  
+  /* Enhanced buttons with glow */
+  .btn-primary {
+    box-shadow: 0 8px 25px rgba(255, 0, 64, 0.4);
+    background: linear-gradient(135deg, #ff0040 0%, #ff6b35 100%);
+  }
+  
+  .btn-primary:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(255, 0, 64, 0.5);
+  }
+  
+  .btn-secondary {
+    border-color: rgba(255, 0, 64, 0.8);
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.2);
+  }
+  
+  .btn-secondary:active {
+    background: linear-gradient(135deg, rgba(255, 0, 64, 0.2), rgba(255, 107, 53, 0.2));
+  }
+  
+  /* Premium cards with gradient border */
+  .purpose-card,
+  .resource-card,
+  .stat-item {
+    background: linear-gradient(145deg, rgba(20, 20, 30, 0.9), rgba(15, 15, 25, 0.95));
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+  
+  .purpose-card::after,
+  .resource-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff0040, #ff6b35, #a855f7);
+    border-radius: 15px 15px 0 0;
+    opacity: 0.8;
+  }
+  
+  /* Enhanced stat cards */
+  .stat-item {
+    background: linear-gradient(180deg, rgba(255, 0, 64, 0.08) 0%, rgba(20, 20, 30, 0.9) 100%);
+    border: 1px solid rgba(255, 0, 64, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .stat-number {
+    text-shadow: 0 0 20px rgba(255, 0, 64, 0.5);
+  }
+  
+  /* Premium avatar glow */
+  .avatar {
+    box-shadow: 
+      0 0 40px rgba(255, 0, 64, 0.4),
+      0 20px 40px rgba(0, 0, 0, 0.5);
+    border: 3px solid transparent;
+    background-image: linear-gradient(#0a0a0f, #0a0a0f), 
+                      linear-gradient(135deg, #ff0040, #ff6b35, #a855f7);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+  
+  /* Premium section titles */
+  .section-title {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .title-underline {
+    background: linear-gradient(90deg, transparent, #ff0040, #ff6b35, transparent);
+    height: 3px;
+    width: 80%;
+    max-width: 200px;
+    border-radius: 2px;
+  }
+  
+  /* Card icons with glow */
+  .card-icon {
+    box-shadow: 0 10px 25px rgba(255, 0, 64, 0.3);
+  }
+  
+  .resource-icon {
+    filter: drop-shadow(0 0 8px rgba(255, 0, 64, 0.4));
+  }
+  
+  /* Premium navigation mobile menu */
+  .nav-links.active {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 15, 0.98) 0%,
+      rgba(15, 15, 25, 0.99) 50%,
+      rgba(20, 20, 35, 0.98) 100%
+    );
+    backdrop-filter: blur(20px);
+  }
+  
+  .nav-link {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:active {
+    background: rgba(255, 0, 64, 0.15);
+    transform: scale(0.98);
+  }
+  
+  /* Footer premium look */
+  footer {
+    background: linear-gradient(
+      180deg,
+      var(--dark-bg) 0%,
+      rgba(5, 5, 10, 0.98) 100%
+    );
+    border-top: 1px solid rgba(255, 0, 64, 0.2);
+  }
+  
+  .social-link {
+    background: rgba(255, 0, 64, 0.1);
+    border: 1px solid rgba(255, 0, 64, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .social-link:active {
+    background: rgba(255, 0, 64, 0.2);
+    transform: scale(0.95);
+  }
+}
+
+/* ----------------------------------
+   LEARNING PAGE MOBILE PREMIUM
+   ---------------------------------- */
+@media (max-width: 768px) {
+  /* Premium filter buttons */
+  .filter-btn {
+    background: rgba(20, 20, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn.active {
+    background: linear-gradient(135deg, #ff0040, #ff6b35);
+    border-color: transparent;
+    box-shadow: 0 5px 20px rgba(255, 0, 64, 0.4);
+  }
+  
+  .filter-btn:active {
+    transform: scale(0.95);
+  }
+  
+  /* Premium course cards */
+  .course-card-clean {
+    background: linear-gradient(180deg, rgba(25, 25, 40, 0.95), rgba(15, 15, 25, 0.98));
+    border: 1px solid rgba(255, 0, 64, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+  
+  .course-card-clean::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff0040, #ff6b35);
+  }
+  
+  .course-card-thumbnail {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .course-card-thumbnail::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(15, 15, 25, 0.9), transparent);
+  }
+  
+  .course-card-content {
+    padding: 1.25rem;
+  }
+  
+  .course-difficulty {
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .course-difficulty.beginner {
+    background: linear-gradient(135deg, #10b981, #059669);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  }
+  
+  .course-difficulty.intermediate {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+  }
+  
+  .course-difficulty.advanced {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+  }
+  
+  .course-card-title {
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+  
+  .course-card-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  
+  .course-card-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .course-card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+  
+  .course-card-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.9rem;
+    background: linear-gradient(135deg, rgba(255, 0, 64, 0.15), rgba(255, 107, 53, 0.1));
+    border: 1px solid rgba(255, 0, 64, 0.4);
+    border-radius: 10px;
+    color: var(--primary-red);
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+  }
+  
+  .course-card-btn:active {
+    background: linear-gradient(135deg, rgba(255, 0, 64, 0.25), rgba(255, 107, 53, 0.2));
+  }
+}
+
+/* ----------------------------------
+   COURSE PAGE MOBILE PREMIUM
+   ---------------------------------- */
+@media (max-width: 768px) {
+  /* Premium mobile sidebar */
+  .course-sidebar-clean {
+    background: linear-gradient(
+      180deg,
+      rgba(15, 15, 25, 0.98) 0%,
+      rgba(10, 10, 20, 0.99) 100%
+    );
+    backdrop-filter: blur(20px);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
+  }
+  
+  .course-sidebar-clean::before {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 0, 64, 0.15) 0%,
+      rgba(255, 0, 64, 0.05) 100%
+    );
+    border-bottom: 1px solid rgba(255, 0, 64, 0.2);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Module items */
+  .module-item-clean {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+  }
+  
+  .module-item-clean.active {
+    background: linear-gradient(135deg, rgba(255, 0, 64, 0.12), rgba(255, 107, 53, 0.08));
+    border: 1px solid rgba(255, 0, 64, 0.4);
+    box-shadow: 0 5px 15px rgba(255, 0, 64, 0.15);
+  }
+  
+  .module-item-clean:active {
+    transform: scale(0.98);
+  }
+  
+  /* Progress bar premium */
+  .progress-bar {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .progress-fill {
+    background: linear-gradient(90deg, #ff0040, #ff6b35, #ff0040);
+    background-size: 200% 100%;
+    animation: progressShine 2s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 0, 64, 0.5);
+  }
+  
+  @keyframes progressShine {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  /* Content area premium */
+  .course-main-clean {
+    background: linear-gradient(
+      180deg,
+      var(--dark-bg) 0%,
+      rgba(8, 8, 15, 1) 100%
+    );
+  }
+  
+  .module-header-clean {
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(90deg, #ff0040, #ff6b35, transparent) 1;
+  }
+  
+  .module-header-clean h1 {
+    background: linear-gradient(135deg, var(--text-primary) 0%, #e0e0e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Quiz premium styling */
+  .quiz-section {
+    background: linear-gradient(145deg, rgba(255, 0, 64, 0.05), rgba(20, 20, 30, 0.9));
+    border: 1px solid rgba(255, 0, 64, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  .quiz-header h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .quiz-header h2::before {
+    content: '📝';
+    font-size: 1.2rem;
+  }
+  
+  .quiz-option {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .quiz-option:active {
+    background: rgba(255, 0, 64, 0.1);
+    transform: scale(0.99);
+  }
+  
+  .quiz-option.selected {
+    background: linear-gradient(135deg, rgba(255, 0, 64, 0.15), rgba(255, 107, 53, 0.1));
+    border-color: rgba(255, 0, 64, 0.5);
+    box-shadow: 0 5px 15px rgba(255, 0, 64, 0.2);
+  }
+  
+  .quiz-option.correct {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.1));
+    border-color: #10b981;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
+  }
+  
+  .quiz-option.incorrect {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.1));
+    border-color: #ef4444;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.2);
+  }
+  
+  /* Navigation buttons premium */
+  .module-nav-clean .btn {
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .module-nav-clean .btn-primary {
+    box-shadow: 0 8px 25px rgba(255, 0, 64, 0.3);
+  }
+}
+
+/* ----------------------------------
+   SAFE AREA INSETS (iPhone X+)
+   ---------------------------------- */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  @media (max-width: 768px) {
+    .course-sidebar-clean {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    
+    .module-nav-clean {
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+    }
+    
+    footer {
+      padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* ----------------------------------
+   DARK MODE OPTIMIZATIONS
+   ---------------------------------- */
+@media (prefers-color-scheme: dark) {
+  @media (max-width: 768px) {
+    /* Already dark theme, but ensure OLED black on mobile */
+    body {
+      background-color: #000;
+    }
+    
+    .hero {
+      background: linear-gradient(180deg, #050508 0%, #000 100%);
+    }
+  }
+}
+
+/* ----------------------------------
+   HIGH CONTRAST MODE
+   ---------------------------------- */
+@media (prefers-contrast: high) {
+  @media (max-width: 768px) {
+    .purpose-card,
+    .resource-card,
+    .stat-item,
+    .course-card-clean {
+      border: 2px solid rgba(255, 0, 64, 0.5);
+    }
+    
+    .btn {
+      border: 2px solid;
+    }
+  }
+}

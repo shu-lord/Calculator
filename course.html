@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course - AI RedCell Learning Hub</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/smooth-transitions.css" />
+    <link rel="stylesheet" href="css/course-clean.css" />
+    <link rel="stylesheet" href="css/mobile-responsive.css" />
+    <link rel="stylesheet" href="css/mobile-premium.css" />
+    <link rel="stylesheet" href="css/content-protection.css" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-text">AI <span class="highlight">RedCell</span></span>
+        </div>
+        <div class="nav-links">
+          <a href="index.html#hero" class="nav-link">Home</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#resources" class="nav-link">Resources</a>
+          <a href="learning.html" class="nav-link active">Learning</a>
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Course Content Layout -->
+    <div class="course-container">
+      <!-- Mobile Sidebar Toggle Button -->
+      <button class="mobile-sidebar-toggle" id="mobileSidebarToggle" aria-label="Toggle course modules">
+        📖
+      </button>
+      
+      <!-- Mobile Sidebar Overlay -->
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
+      
+      <!-- Sidebar -->
+      <aside class="course-sidebar-clean" id="courseSidebar">
+        <div class="sidebar-header">
+          <h2 id="sidebarCourseTitle">Prompt Engineering Fundamentals</h2>
+          <span class="difficulty-badge beginner" id="sidebarDifficulty">Beginner</span>
+        </div>
+        
+        <div class="progress-section">
+          <div class="progress-label">
+            <span>Your Progress</span>
+            <span class="progress-percentage" id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div class="module-list-section">
+          <h3>Modules</h3>
+          <ul class="module-list-clean" id="moduleList">
+            <!-- Modules will be loaded dynamically -->
+            <li class="module-item-clean active" data-module="0">
+              <span class="module-check">○</span>
+              <span class="module-title">1. Introduction to Prompts</span>
+            </li>
+            <li class="module-item-clean" data-module="1">
+              <span class="module-check">○</span>
+              <span class="module-title">2. Crafting Effective Prompts</span>
+            </li>
+            <li class="module-item-clean" data-module="2">
+              <span class="module-check">○</span>
+              <span class="module-title">3. Advanced Techniques</span>
+            </li>
+            <li class="module-item-clean" data-module="3">
+              <span class="module-check">○</span>
+              <span class="module-title">4. Testing & Iteration</span>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="course-main-clean">
+        <!-- Module Content -->
+        <article class="module-article" id="moduleArticle">
+          <header class="module-header-clean">
+            <h1 id="moduleTitle">Module 1: Introduction to Prompts</h1>
+            <p class="module-description" id="moduleDescription">
+              Learn the fundamentals of prompt engineering and understand what makes a good prompt.
+            </p>
+          </header>
+
+          <div class="module-content-clean" id="moduleContent">
+            <!-- Content loaded from JSON/CMS -->
+            <h2>What is Prompt Engineering?</h2>
+            <p>
+              Prompt engineering is the practice of designing and refining inputs (prompts) to get the best possible outputs from AI language models. It's both an art and a science that requires understanding how AI models interpret and respond to different types of instructions.
+            </p>
+
+            <h2>Why Prompt Engineering Matters</h2>
+            <p>
+              The quality of your prompts directly impacts the quality of AI responses. Well-crafted prompts can:
+            </p>
+            <ul>
+              <li>Produce more accurate and relevant responses</li>
+              <li>Reduce ambiguity and misinterpretation</li>
+              <li>Unlock advanced AI capabilities</li>
+              <li>Save time by getting better results faster</li>
+            </ul>
+
+            <h2>Key Concepts</h2>
+            <p>
+              <strong>Clarity:</strong> Your prompt should be clear and specific about what you want.
+            </p>
+            <p>
+              <strong>Context:</strong> Providing relevant background information helps the AI understand your needs.
+            </p>
+            <p>
+              <strong>Constraints:</strong> Setting boundaries helps guide the AI's response format and scope.
+            </p>
+
+            <h2>Example</h2>
+            <pre><code>// Poor prompt:
+"Tell me about AI"
+
+// Better prompt:
+"Explain how transformer architecture works in large language models, 
+focusing on the attention mechanism. Use simple analogies suitable 
+for someone with basic programming knowledge."</code></pre>
+            <p>
+              The second prompt is better because it's specific, provides context about the audience's knowledge level, and sets clear expectations for the response style.
+            </p>
+          </div>
+
+          <!-- Simple Quiz Section -->
+          <section class="quiz-section" id="quizSection">
+            <div class="quiz-header">
+              <h2>Quick Quiz</h2>
+              <span class="quiz-progress" id="quizProgress">Question 1 of 3</span>
+            </div>
+
+            <div class="quiz-container" id="quizContainer">
+              <div class="quiz-question active" data-question="0">
+                <p class="question-text">What is the main goal of prompt engineering?</p>
+                <div class="quiz-options">
+                  <label class="quiz-option">
+                    <input type="radio" name="q0" value="0">
+                    <span class="option-text">To confuse the AI</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q0" value="1">
+                    <span class="option-text">To get better AI responses</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q0" value="2">
+                    <span class="option-text">To make prompts longer</span>
+                  </label>
+                  <label class="quiz-option">
+                    <input type="radio" name="q0" value="3">
+                    <span class="option-text">To use technical jargon</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="quiz-feedback" id="quizFeedback" style="display: none;">
+                <div class="feedback-icon"></div>
+                <p class="feedback-explanation" id="feedbackText"></p>
+              </div>
+
+              <div class="quiz-actions">
+                <button class="btn btn-primary" id="submitQuizBtn">Submit Answer</button>
+                <button class="btn btn-primary" id="nextQuestionBtn" style="display: none;">Next Question</button>
+              </div>
+
+              <div class="quiz-results" id="quizResults" style="display: none;">
+                <h3>Quiz Complete!</h3>
+                <p class="score-text" id="scoreText">You scored 2 out of 3</p>
+                <button class="btn btn-secondary" id="retryQuizBtn">Retry Quiz</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Module Navigation -->
+          <nav class="module-nav-clean">
+            <button id="prevModule" class="btn btn-secondary" disabled>
+              ← Previous Module
+            </button>
+            <button id="markCompleteBtn" class="btn btn-primary">
+              Mark as Complete ✓
+            </button>
+            <button id="nextModule" class="btn btn-primary">
+              Next Module →
+            </button>
+          </nav>
+        </article>
+      </main>
+    </div>
+
+
+    <script src="js/matrix.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/course-loader.js"></script>
+    <script src="js/content-protection.js"></script>
+  </body>
+</html>

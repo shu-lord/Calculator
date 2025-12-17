@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "visible": true,
+    "title": "AI RedCell",
+    "subtitle": "AI Vulnerability & Adversarial Penetration Testing",
+    "description": "Making AI Safer Through Ethical Adversarial Testing | From Prompt Injection to Full-Stack LLM Security",
+    "primaryButton": {
+      "text": "Start Learning",
+      "link": "learning.html"
+    },
+    "secondaryButton": {
+      "text": "Request Assessment",
+      "link": "#contact"
+    }
+  },
+  "about": {
+    "visible": true,
+    "sectionTitle": "About",
+    "sectionTitleHighlight": "Me",
+    "name": "Shehan Nilukshan",
+    "jobTitle": "ethical AI security researcher and jailbreaking specialist",
+    "organization": "AI RedCell",
+    "bio1": "I founded AI RedCell to explore AI jailbreaking techniques ethically, discovering vulnerabilities before malicious actors can exploit them. My work focuses on prompt injection, AI safety, and responsible disclosure.",
+    "bio2": "My mission is to educate the AI security community and protect AI systems through transparent research and knowledge sharing. Through rigorous penetration testing and ethical hacking methodologies, I work to make artificial intelligence safer for everyone.",
+    "profileImage": "images/my-img.png",
+    "stats": [
+      {
+        "visible": true,
+        "number": "500+",
+        "label": "Tests Conducted"
+      },
+      {
+        "visible": true,
+        "number": "50+",
+        "label": "Vulnerabilities Found"
+      },
+      {
+        "visible": true,
+        "number": "100%",
+        "label": "Ethical Approach"
+      }
+    ]
+  },
+  "purpose": {
+    "visible": true,
+    "sectionTitle": "What Is Adversarial",
+    "sectionTitleHighlight": "Penetration Testing?",
+    "description": "Adversarial Penetration Testing is a proactive security methodology where we simulate real-world attacks against AI systems to uncover vulnerabilities before malicious actors can exploit them. Our red team approach tests LLMs, agentic AI, and machine learning pipelines using advanced techniques like prompt injection, jailbreaking, and data poisoning attacks.",
+    "cards": [
+      {
+        "visible": true,
+        "icon": "shield",
+        "title": "Attack Simulation",
+        "description": "We replicate sophisticated adversarial tactics—prompt injection, model manipulation, and bypass techniques—to stress-test your AI systems under realistic threat scenarios."
+      },
+      {
+        "visible": true,
+        "icon": "ethics",
+        "title": "Ethical Red Teaming",
+        "description": "Our testing follows strict ethical guidelines with responsible disclosure. We identify and report vulnerabilities safely, helping you patch weaknesses before they're exploited."
+      },
+      {
+        "visible": true,
+        "icon": "education",
+        "title": "Actionable Insights",
+        "description": "Receive detailed vulnerability reports with risk assessments, exploitation pathways, and remediation strategies to strengthen your AI's security posture."
+      }
+    ]
+  },
+  "resources": {
+    "visible": false,
+    "sectionTitle": "Research",
+    "sectionTitleHighlight": "Resources",
+    "description": "Access Shehan Nilukshan's curated collection of AI security tools, jailbreaking guides, and research materials for ethical AI exploration.",
+    "cards": [
+      {
+        "visible": true,
+        "icon": "github",
+        "title": "GitHub Repository",
+        "description": "Explore our open-source tools, scripts, and testing frameworks for ethical AI research.",
+        "link": "https://github.com/orgs/AI-RedCell/repositories",
+        "linkText": "Visit Repository →"
+      },
+      {
+        "visible": true,
+        "icon": "wiki",
+        "title": "Reddit Wiki",
+        "description": "Comprehensive guides and community discussions on AI jailbreaking techniques and ethics.",
+        "link": "https://www.reddit.com/r/ChatGPTJailbreak/wiki/",
+        "linkText": "Read Wiki →"
+      },
+      {
+        "visible": true,
+        "icon": "document",
+        "title": "Prompt Injection Guides",
+        "description": "Detailed tutorials on understanding and testing prompt injection vulnerabilities safely.",
+        "link": "#",
+        "linkText": "Access Guides →"
+      },
+      {
+        "visible": true,
+        "icon": "book",
+        "title": "Research Articles",
+        "description": "In-depth analysis and findings from our ethical AI security research and testing.",
+        "link": "#",
+        "linkText": "Read Articles →"
+      }
+    ]
+  },
+  "contact": {
+    "visible": true,
+    "sectionTitle": "Request",
+    "sectionTitleHighlight": "Security Assessment",
+    "description": "Ready to secure your AI systems? Fill out the form below and our team will get back to you within 24 hours with a tailored assessment proposal.",
+    "email": "hello@airedcell.dev",
+    "socialLinks": {
+      "github": "https://github.com/AI-RedCell",
+      "linkedin": "https://www.linkedin.com/company/ai-redcell/"
+    }
+  }
+}

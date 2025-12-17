@@ -1,0 +1,50 @@
+{
+  "sectionTitle": "Highlighted Projects",
+  "sectionSubtitle": "Showcasing our impact in AI security and innovative solutions",
+  "projects": [
+    {
+      "id": "redx-firewall",
+      "category": "AI Security",
+      "title": "RedX AI Firewall",
+      "client": "Open Source Project",
+      "description": "Advanced AI security firewall that detects and blocks prompt injection attacks, jailbreak attempts, and malicious inputs in real-time.",
+      "impact": "99.2% attack detection rate with sub-millisecond response time",
+      "image": "images/redx-firewall.png",
+      "tags": ["AI Security", "Prompt Injection", "Firewall"],
+      "link": "https://github.com/AI-RedCell/RedX-Firewall"
+    },
+    {
+      "id": "llm-vulnerability-scanner",
+      "category": "Coming Soon",
+      "title": "LLM Vulnerability Scanner",
+      "client": "Enterprise Client",
+      "description": "Automated vulnerability assessment tool for large language models. Currently in development.",
+      "impact": "Coming Soon",
+      "image": "images/AI RedCell.png",
+      "tags": ["Vulnerability Research", "Automation", "LLM"],
+      "link": "#"
+    },
+    {
+      "id": "prompt-injection-defense",
+      "category": "Coming Soon",
+      "title": "Prompt Injection Defense Suite",
+      "client": "AI Startup",
+      "description": "Comprehensive defense system against prompt injection attacks. Currently in development.",
+      "impact": "Coming Soon",
+      "image": "images/AI RedCell.png",
+      "tags": ["Defense", "Prompt Injection", "Security"],
+      "link": "#"
+    },
+    {
+      "id": "ai-red-team-assessment",
+      "category": "Coming Soon",
+      "title": "Enterprise AI Red Team Assessment",
+      "client": "Fortune 500 Company",
+      "description": "Full-scale adversarial testing of AI chatbot infrastructure. Currently in development.",
+      "impact": "Coming Soon",
+      "image": "images/AI RedCell.png",
+      "tags": ["Red Teaming", "Enterprise", "Assessment"],
+      "link": "#"
+    }
+  ]
+}

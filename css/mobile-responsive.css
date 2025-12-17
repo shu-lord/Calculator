@@ -1,0 +1,1005 @@
+/* ===================================
+   MOBILE RESPONSIVE ENHANCEMENTS
+   AI RedCell - Full Device Support
+   =================================== */
+
+/* ----------------------------------
+   BASE MOBILE IMPROVEMENTS
+   ---------------------------------- */
+
+/* Better tap targets for mobile (min 44px) */
+a, button, .btn, .nav-link, .module-item-clean, .quiz-option {
+  min-height: 44px;
+}
+
+/* Prevent text size adjust on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Smooth scrolling with reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hide mobile-only elements on desktop */
+.mobile-sidebar-toggle,
+.sidebar-overlay {
+  display: none;
+}
+
+/* ----------------------------------
+   TABLET LANDSCAPE (1024px - 1200px)
+   ---------------------------------- */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+  
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .resources-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* ----------------------------------
+   TABLET PORTRAIT (768px - 1024px)
+   ---------------------------------- */
+@media (max-width: 1024px) {
+  /* Navigation improvements */
+  .nav-container {
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  /* Hero section */
+  .hero-title {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  /* Sections */
+  section {
+    padding: 70px 0;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  /* Purpose cards */
+  .purpose-card {
+    padding: 2rem;
+  }
+  
+  /* Course page improvements */
+  .course-sidebar-clean {
+    width: 280px;
+    min-width: 280px;
+  }
+  
+  .course-main-clean {
+    margin-left: 280px;
+    padding: 2rem;
+  }
+}
+
+/* ----------------------------------
+   MOBILE LANDSCAPE / SMALL TABLET (768px)
+   ---------------------------------- */
+@media (max-width: 768px) {
+  /* Container */
+  .container {
+    padding: 0 20px;
+  }
+  
+  /* Mobile navigation */
+  .nav-container {
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: rgba(10, 10, 15, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    left: 0;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .hamburger {
+    display: flex;
+    z-index: 1000;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+  
+  /* Hero section */
+  .hero {
+    min-height: 100vh;
+    padding: 80px 0 40px;
+  }
+  
+  .hero-content {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding: 0 10px;
+  }
+  
+  .hero-buttons {
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .scroll-indicator {
+    bottom: 20px;
+  }
+  
+  .mouse {
+    width: 24px;
+    height: 40px;
+  }
+  
+  /* Sections */
+  section {
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  .section-description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  /* About section */
+  .about-content {
+    text-align: center;
+  }
+  
+  .avatar {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+  
+  .avatar-glow {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .about-text {
+    padding: 0 10px;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .stat-item {
+    padding: 1.25rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  /* Purpose section */
+  .purpose-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .purpose-card {
+    padding: 1.75rem;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .purpose-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Workflow */
+  .workflow {
+    padding: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .workflow-title {
+    font-size: 1.5rem;
+  }
+  
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  .step-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .step-content p {
+    font-size: 0.85rem;
+  }
+  
+  /* Resources section */
+  .resources-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .resource-card {
+    padding: 1.5rem;
+  }
+  
+  .resource-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .resource-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  /* Contact section */
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+  
+  /* WhatsApp button mobile optimization */
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    margin-top: 1.25rem;
+  }
+  
+  /* Phone link tap-to-call optimization */
+  .footer-contact a[href^="tel:"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--primary-red);
+  }
+  
+  .footer-contact a[href^="tel:"]:active {
+    transform: scale(0.98);
+  }
+  
+  /* Footer links centered on mobile */
+  .footer-links {
+    text-align: center;
+  }
+  
+  /* Learning page */
+  .courses-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .filter-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Course page breadcrumb */
+  .breadcrumb-container {
+    margin-top: 60px;
+    padding: 0.75rem 0;
+  }
+  
+  .breadcrumb-container .container {
+    padding: 0 1rem;
+  }
+  
+  .breadcrumb {
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+    line-height: 1.5;
+  }
+  
+  .breadcrumb a {
+    padding: 0.25rem 0;
+  }
+  
+  .breadcrumb-current {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Mobile sidebar - Left slide-out drawer (like desktop) */
+  .course-sidebar-clean {
+    position: fixed !important;
+    width: 85% !important;
+    max-width: 320px !important;
+    min-width: unset !important;
+    max-height: none !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    padding-top: 70px !important;
+    padding-bottom: 20px !important;
+    border-right: 2px solid var(--primary-red) !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    z-index: 500 !important;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    background: linear-gradient(180deg, rgba(10, 10, 20, 0.99) 0%, rgba(5, 5, 15, 0.99) 100%) !important;
+    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5) !important;
+  }
+  
+  .course-sidebar-clean.active {
+    transform: translateX(0) !important;
+  }
+  
+  /* Hide the ::before content on mobile sidebar */
+  .course-sidebar-clean::before {
+    display: none;
+  }
+  
+  /* Mobile sidebar overlay */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 499;
+    backdrop-filter: blur(3px);
+  }
+  
+  .sidebar-overlay.active {
+    display: block;
+  }
+  
+  /* Mobile sidebar toggle button */
+  .mobile-sidebar-toggle {
+    display: flex !important;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff0040, #ff6b35);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 5px 25px rgba(255, 0, 64, 0.5);
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .mobile-sidebar-toggle:active {
+    transform: scale(0.95);
+  }
+  
+  .mobile-sidebar-toggle.active {
+    background: linear-gradient(135deg, #ff6b35, #ff0040);
+  }
+  
+  /* ===== MOBILE SIDEBAR CONTENT STYLING ===== */
+  /* Make sidebar content look exactly like desktop */
+  
+  .course-sidebar-clean .sidebar-header {
+    padding: 1.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 0, 64, 0.15);
+    background: linear-gradient(180deg, rgba(255, 0, 64, 0.08) 0%, transparent 100%);
+  }
+  
+  .course-sidebar-clean .sidebar-header h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+  
+  .course-sidebar-clean .difficulty-badge {
+    display: inline-block;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Progress Section */
+  .course-sidebar-clean .progress-section {
+    padding: 0 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 0, 64, 0.1);
+  }
+  
+  .course-sidebar-clean .progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .course-sidebar-clean .progress-bar {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .course-sidebar-clean .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-red), var(--secondary-orange));
+    border-radius: 4px;
+  }
+  
+  /* Module List Section */
+  .course-sidebar-clean .module-list-section {
+    padding: 0 1rem;
+  }
+  
+  .course-sidebar-clean .module-list-section h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .course-sidebar-clean .module-list-clean {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .course-sidebar-clean .module-item-clean {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    background: transparent;
+  }
+  
+  .course-sidebar-clean .module-item-clean:hover {
+    background: rgba(255, 0, 64, 0.05);
+    border-color: rgba(255, 0, 64, 0.15);
+  }
+  
+  .course-sidebar-clean .module-item-clean.active {
+    background: rgba(255, 0, 64, 0.1);
+    border-color: var(--primary-red);
+  }
+  
+  .course-sidebar-clean .module-item-clean.completed .module-check {
+    color: #10b981;
+  }
+  
+  .course-sidebar-clean .module-check {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .course-sidebar-clean .module-title {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+  
+  .course-sidebar-clean .module-item-clean.active .module-title {
+    color: var(--primary-red);
+    font-weight: 600;
+  }
+  
+  .course-main-clean {
+    margin-left: 0;
+    margin-bottom: 0;
+    padding: 1.5rem;
+  }
+  
+  .module-article {
+    max-width: 100%;
+  }
+  
+  .module-header-clean {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .module-header-clean h1 {
+    font-size: 1.5rem;
+  }
+  
+  .module-content-clean {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .module-content-clean h2 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+  
+  .module-content-clean h3 {
+    font-size: 1.15rem;
+  }
+  
+  .module-content-clean pre {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Quiz on mobile */
+  .quiz-section {
+    padding: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  
+  .quiz-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .quiz-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .question-text {
+    font-size: 1rem;
+  }
+  
+  .quiz-option {
+    padding: 1rem;
+  }
+  
+  .quiz-actions {
+    flex-direction: column;
+  }
+  
+  .quiz-actions .btn {
+    width: 100%;
+  }
+  
+  /* Module navigation */
+  .module-nav-clean {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .module-nav-clean .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ----------------------------------
+   MOBILE PORTRAIT (480px)
+   ---------------------------------- */
+@media (max-width: 480px) {
+  /* Container */
+  .container {
+    padding: 0 15px;
+  }
+  
+  /* Hero */
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Sections */
+  section {
+    padding: 40px 0;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .section-description {
+    font-size: 0.9rem;
+  }
+  
+  /* About */
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .avatar-glow {
+    width: 170px;
+    height: 170px;
+  }
+  
+  .intro-text {
+    font-size: 0.95rem;
+  }
+  
+  .stat-number {
+    font-size: 1.75rem;
+  }
+  
+  .stat-label {
+    font-size: 0.85rem;
+  }
+  
+  /* Cards */
+  .purpose-card,
+  .resource-card {
+    padding: 1.25rem;
+  }
+  
+  .purpose-card h3,
+  .resource-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .purpose-card p,
+  .resource-card p {
+    font-size: 0.9rem;
+  }
+  
+  /* Course cards */
+  .course-card-clean {
+    border-radius: 12px;
+  }
+  
+  .course-card-thumbnail {
+    height: 140px;
+  }
+  
+  .course-card-content {
+    padding: 1rem;
+  }
+  
+  .course-card-title {
+    font-size: 1rem;
+  }
+  
+  .course-card-description {
+    font-size: 0.85rem;
+  }
+  
+  /* Course page */
+  .module-header-clean h1 {
+    font-size: 1.3rem;
+  }
+  
+  .module-content-clean {
+    font-size: 0.95rem;
+  }
+  
+  .module-content-clean h2 {
+    font-size: 1.2rem;
+  }
+  
+  .quiz-section {
+    padding: 1rem;
+  }
+  
+  .quiz-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .question-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ----------------------------------
+   SMALL PHONES (360px)
+   ---------------------------------- */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .section-title {
+    font-size: 1.4rem;
+  }
+  
+  .avatar {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+  
+  .purpose-card,
+  .resource-card {
+    padding: 1rem;
+  }
+  
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .module-header-clean h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ----------------------------------
+   LANDSCAPE ORIENTATION FIXES
+   ---------------------------------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: 80px 0 40px;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+  
+  .nav-links {
+    padding-top: 20px;
+    gap: 1rem;
+  }
+  
+  .course-sidebar-clean {
+    max-height: 80vh;
+  }
+}
+
+/* ----------------------------------
+   TOUCH DEVICE OPTIMIZATIONS
+   ---------------------------------- */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove hover effects on touch devices */
+  .purpose-card:hover,
+  .resource-card:hover,
+  .stat-item:hover {
+    transform: none;
+  }
+  
+  /* Make tap states visible */
+  .purpose-card:active,
+  .resource-card:active,
+  .stat-item:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  
+  /* Better touch targets */
+  .module-item-clean {
+    padding: 1.25rem 1rem;
+    min-height: 50px;
+  }
+  
+  .quiz-option {
+    padding: 1.25rem;
+    min-height: 54px;
+  }
+  
+  /* Improve scrolling */
+  .course-sidebar-clean {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent accidental double-tap zoom */
+  .btn, button, .nav-link {
+    touch-action: manipulation;
+  }
+}
+
+/* ----------------------------------
+   PRINT STYLES
+   ---------------------------------- */
+@media print {
+  .navbar,
+  .hamburger,
+  .scroll-indicator,
+  .hero::after,
+  #matrix-canvas,
+  .course-sidebar-clean,
+  .module-nav-clean,
+  .quiz-section {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .hero {
+    min-height: auto;
+    height: auto;
+    padding: 20px 0;
+  }
+  
+  .course-main-clean {
+    margin-left: 0;
+  }
+}
