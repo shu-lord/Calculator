@@ -2,11 +2,15 @@ export default async function handler(req, res) {
   const { code } = req.query;
   
   if (!code) {
-    return res.status(400).json({ error: 'Missing authorization code' });
+    return res.status(400).send('Missing authorization code');
   }
 
   const clientId = process.env.client_id;
   const clientSecret = process.env.client_secret;
+
+  if (!clientId || !clientSecret) {
+    return res.status(500).send('OAuth credentials not configured');
+  }
 
   try {
     // Exchange code for access token
@@ -26,52 +30,47 @@ export default async function handler(req, res) {
     const tokenData = await tokenResponse.json();
 
     if (tokenData.error) {
-      return res.status(400).json({ error: tokenData.error_description });
+      return res.status(400).send(`GitHub OAuth error: ${tokenData.error_description}`);
     }
 
-    const { access_token, token_type } = tokenData;
+    const { access_token } = tokenData;
 
-    // Return HTML that passes the token to the CMS
-    const html = `
-<!DOCTYPE html>
+    // Return HTML that passes the token to Decap CMS
+    // Using the exact format Decap CMS expects
+    const html = `<!DOCTYPE html>
 <html>
 <head>
-  <title>Authorization Complete</title>
+  <meta charset="utf-8">
+  <title>Authorizing...</title>
 </head>
 <body>
+  <p>Completing authorization...</p>
   <script>
     (function() {
-      const token = "${access_token}";
-      const provider = "github";
-      
-      // Send message to parent window (Decap CMS)
-      if (window.opener) {
+      function receiveMessage(e) {
+        console.log("receiveMessage %o", e);
+        
+        // Send the token to the opener (Decap CMS)
         window.opener.postMessage(
-          'authorization:' + provider + ':success:' + JSON.stringify({ token, provider }),
-          '*'
+          'authorization:github:success:{"token":"${access_token}","provider":"github"}',
+          e.origin
         );
-        window.close();
-      } else {
-        // Fallback - redirect to admin with token
-        document.body.innerHTML = '<p>Authorization successful! Redirecting...</p>';
-        setTimeout(function() {
-          window.location.href = '/admin/';
-        }, 1000);
       }
+      
+      window.addEventListener("message", receiveMessage, false);
+      
+      // Tell the opener we're ready
+      window.opener.postMessage("authorizing:github", "*");
     })();
   </script>
-  <noscript>
-    <p>Authorization successful! Please close this window and return to the CMS.</p>
-  </noscript>
 </body>
-</html>
-    `;
+</html>`;
 
     res.setHeader('Content-Type', 'text/html');
     res.status(200).send(html);
 
   } catch (error) {
     console.error('OAuth error:', error);
-    res.status(500).json({ error: 'Failed to complete authorization' });
+    res.status(500).send('Failed to complete authorization');
   }
 }
