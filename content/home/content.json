@@ -14,15 +14,15 @@
     }
   },
   "about": {
-    "visible": true,
-    "sectionTitle": "About",
     "sectionTitleHighlight": "Me",
-    "name": "Shehan Nilukshan",
-    "jobTitle": "ethical AI security researcher and jailbreaking specialist",
-    "organization": "AI RedCell",
     "bio1": "I founded AI RedCell to explore AI jailbreaking techniques ethically, discovering vulnerabilities before malicious actors can exploit them. My work focuses on prompt injection, AI safety, and responsible disclosure.",
     "bio2": "My mission is to educate the AI security community and protect AI systems through transparent research and knowledge sharing. Through rigorous penetration testing and ethical hacking methodologies, I work to make artificial intelligence safer for everyone.",
+    "name": "Shehan Nilukshan",
+    "visible": true,
     "profileImage": "images/my-img.png",
+    "organization": "AI RedCell",
+    "sectionTitle": "About",
+    "jobTitle": "ethical AI security researcher and jailbreaking specialist",
     "stats": [
       {
         "visible": true,
@@ -75,19 +75,19 @@
     "cards": [
       {
         "visible": true,
-        "icon": "github",
-        "title": "GitHub Repository",
-        "description": "Explore our open-source tools, scripts, and testing frameworks for ethical AI research.",
-        "link": "https://github.com/orgs/AI-RedCell/repositories",
-        "linkText": "Visit Repository →"
-      },
-      {
-        "visible": true,
         "icon": "wiki",
         "title": "Reddit Wiki",
         "description": "Comprehensive guides and community discussions on AI jailbreaking techniques and ethics.",
         "link": "https://www.reddit.com/r/ChatGPTJailbreak/wiki/",
         "linkText": "Read Wiki →"
+      },
+      {
+        "visible": true,
+        "icon": "github",
+        "title": "GitHub Repository",
+        "description": "Explore our open-source tools, scripts, and testing frameworks for ethical AI research.",
+        "link": "https://github.com/orgs/AI-RedCell/repositories",
+        "linkText": "Visit Repository →"
       },
       {
         "visible": true,
